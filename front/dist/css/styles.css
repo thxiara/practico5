@@ -53,11 +53,12 @@ header {
 }
 header ul {
     display: flex;
+    flex-direction:row;
     gap: 3em;
     list-style: none;
 }
 header a {
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 header a:hover {
@@ -68,8 +69,53 @@ header a:hover {
     font-size: 2.3em;
     text-decoration: underline;
 }
-.header-menu a{
-    color:black;
+.header-hero a{
+    color:white;
+}
+#menulateral-1, .menulateral-abrir, .menulateral-cerrar {
+    display: none;
+}
+.menulateral-abrir, .menulateral-cerrar {
+    cursor: pointer;
+}
+@media (max-width: 930px) {
+    .menulateral-abrir {
+        display: block;
+    }
+    .header-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: #ffad1f;
+        z-index: 1000;
+        flex-direction: column;
+        padding: 2em;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2em;
+        margin-top: 2em;
+    }
+    header a {
+        width: 100%;
+        display: block;
+        font-size: 1.2em;
+    }
+    header a:hover {
+    color:white;
+    text-decoration: underline;
+}
+    .menulateral-cerrar {
+        display: block;
+        align-self: flex-end;
+    }
+    #menulateral-1:checked ~ .header-links {
+        display: flex;
+    }
 }
 #hero {
     flex: 1;
@@ -277,4 +323,8 @@ footer {
 }
 .menu-titulo a:hover{
     color:#ffad1f;
+}
+
+@media screen {
+    
 }
