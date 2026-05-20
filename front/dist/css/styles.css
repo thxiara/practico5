@@ -324,10 +324,6 @@ footer {
 .menu-titulo a:hover{
     color:#ffad1f;
 }
-
-/* ===================================================
-   VISTA MÓVIL CORREGIDA (Sin conflictos de clases)
-   =================================================== */
 @media (max-width: 768px) {
     section {
         padding: 0 1.5em;
