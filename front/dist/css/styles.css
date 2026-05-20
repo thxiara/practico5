@@ -325,6 +325,67 @@ footer {
     color:#ffad1f;
 }
 
-@media screen {
-    
+/* ===================================================
+   VISTA MÓVIL CORREGIDA (Sin conflictos de clases)
+   =================================================== */
+@media (max-width: 768px) {
+    section {
+        padding: 0 1.5em;
+        margin-bottom: 2.5em;
+    }
+    h1 {
+        font-size: 2.8em;
+    }
+    .separador {
+        width: 30%;
+    }
+    .texto-y-galeria {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    .texto-y-galeria .columna-texto, 
+    .texto-y-galeria .columna-galeria {
+        max-width: 100%;
+        width: 100%;
+    }
+    .galeria-doble {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .galeria-doble img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    .galeria-cuadricula {
+        gap: 0.8em;
+    }
+    section.overlay {
+        grid-template-rows: 250px; 
+    }
+    #menu-opciones {
+        height: auto;
+        padding-top: 6em;
+        margin-bottom: 2em;
+    }
+    .categorias {
+        height: auto;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    .categorias .overlay {
+        width: 100%;
+        aspect-ratio: auto;
+        grid-template-rows: 150px;
+    }
+    .categorias .overlay .overlay-fotos img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .menu {
+        gap: 1.5em;
+        padding: 0 1em;
+    }
 }
